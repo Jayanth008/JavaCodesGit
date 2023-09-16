@@ -30,5 +30,5 @@ public class MainMethos {
 		DaysOfWeek valueOf = DaysOfWeek.valueOf("MONDAY");
 		System.out.println(valueOf);
 	}
-
+// checking Git Desktop App
 }
