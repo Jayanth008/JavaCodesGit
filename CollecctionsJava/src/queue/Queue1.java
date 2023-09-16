@@ -47,5 +47,5 @@ public class Queue1 {
 		queue.clear();
 		System.out.println("Queue after clearing: " + queue); // Output: Queue after clearing: []
 	}
-
+// checking git desktop app
 }
