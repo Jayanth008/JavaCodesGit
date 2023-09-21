@@ -16,16 +16,16 @@ public class Vector2 {
 		//index number
 		vct2.remove(3);
 		System.out.println(vct2);
-		
+
 		// updating elements
 		vct2.set(5, 50);
 		System.out.println(vct2);
-		
+
 		vct2.insertElementAt(190,19);
 		System.out.println(vct2);
-		
+
 		vct2.addElement(1000);
-		
+
 		System.out.println(vct2);
 	}
 

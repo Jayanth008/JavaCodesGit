@@ -5,19 +5,26 @@ public class MainMethos {
 	public static void main(String[] args) {
 		DaysOfWeek day = DaysOfWeek.MONDAY;
 		switch (day) {
-		case FRIDAY: System.out.println();
+		case FRIDAY:
+			System.out.println();
 			break;
-		case MONDAY:System.out.println();
+		case MONDAY:
+			System.out.println();
 			break;
-		case SATURDAY:System.out.println();
+		case SATURDAY:
+			System.out.println();
 			break;
-		case SUNDAY:System.out.println();
+		case SUNDAY:
+			System.out.println();
 			break;
-		case THURSDAY:System.out.println();
+		case THURSDAY:
+			System.out.println();
 			break;
-		case TUESDAY:System.out.println();
+		case TUESDAY:
+			System.out.println();
 			break;
-		case WEDNESDAY:System.out.println();
+		case WEDNESDAY:
+			System.out.println();
 			break;
 		default:
 			break;
@@ -29,6 +36,15 @@ public class MainMethos {
 		}
 		DaysOfWeek valueOf = DaysOfWeek.valueOf("MONDAY");
 		System.out.println(valueOf);
+
+		Gender male = Gender.MALE;
+		System.out.println(male);
+		Gender female = Gender.FEMALE;
+		System.out.println(female);
+		for (Gender g : Gender.values()) {
+			System.out.println(g);
+		}
 	}
+
 // checking Git Desktop App
 }

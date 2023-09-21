@@ -16,7 +16,7 @@ public class ArrayList1 {
 		// default class
 		// dynamic array
 		// default generics
-		Collection<Object> obj = new ArrayList<Object>();
+		Collection<Object> obj = new ArrayList<>();
 		System.out.println(obj.size());
 		obj.add("shiva");
 		obj.add("jai");
