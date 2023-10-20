@@ -15,13 +15,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GoldModel {
+public class PetrolModel {
 	@Id
 //	@GeneratedValue(strategy = GenerationType.AUTO)
-//	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "goldId")
-//    @SequenceGenerator(name = "goldId", sequenceName = "id_sequence", initialValue = 1, allocationSize = 1)
-	@SequenceGenerator(name = "goldId",sequenceName = "goldId",initialValue = 1,allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "goldId")
+//	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "petrolId")
+//    @SequenceGenerator(name = "petrolId", sequenceName = "id_sequence", initialValue = 1, allocationSize = 1)
+	@SequenceGenerator(name = "petrolId",sequenceName = "petrolId",initialValue = 1,allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "petrolId")
 	private int id;
 	private LocalDate date;
 	private double price;
