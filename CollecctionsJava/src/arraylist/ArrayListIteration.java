@@ -15,8 +15,8 @@ public class ArrayListIteration {
 
 			// typical for loop
 			System.err.println("typical for loop");
-			for (int i = 0; i < names.size(); i++) {
-				System.out.println(names.get(i));
+			for (String name : names) {
+				System.out.println(name);
 			}
 		}
 		synchronized (names) {
