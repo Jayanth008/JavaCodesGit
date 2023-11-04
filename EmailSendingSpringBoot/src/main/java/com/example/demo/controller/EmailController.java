@@ -42,7 +42,7 @@ public class EmailController {
 				+ "Have a great day!";
 
 		EmailDetailes emailDetails = new EmailDetailes();
-		emailDetails.setRecipient("prudhvi.kalavakunta@capgemini.com");
+		emailDetails.setRecipient("buddi-shiva.prasad@capgemini.com");
 		emailDetails.setSubject("JMS Test Email");
 		emailDetails.setMsgBody(messageBody);
 		String status = emailService.sendEmail(emailDetails);
