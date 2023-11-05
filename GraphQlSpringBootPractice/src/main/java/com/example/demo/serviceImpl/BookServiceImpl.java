@@ -35,7 +35,6 @@ public class BookServiceImpl implements BookService {
 		Book existingBook = repo.findById(id).orElse(null);
 
 		if (existingBook != null) {
-			// Update the fields of the existing book with the values from the updatedBook
 			existingBook.setTitle(book.getTitle());
 			existingBook.setDescp(book.getDescp());
 			existingBook.setAuthor(book.getAuthor());
@@ -44,8 +43,14 @@ public class BookServiceImpl implements BookService {
 
 			return repo.save(existingBook);
 		} else {
-			return null; // Book not found
+			return null;
 		}
+	}
+
+	@Override
+	public String deleteBook(int id) {
+		repo.deleteById(id);
+		return "Book Deleted";
 	}
 
 }

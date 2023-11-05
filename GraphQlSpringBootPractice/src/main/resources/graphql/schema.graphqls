@@ -6,6 +6,7 @@ type Query {
 type Mutation {
   createBook(book: BookInput): Book
   updateBook(id: Int, book: BookInput): Book
+  deleteBook(id:Int):String
 }
 
 

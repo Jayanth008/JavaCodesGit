@@ -11,7 +11,6 @@ import org.springframework.stereotype.Controller;
 import com.example.demo.model.Book;
 import com.example.demo.service.BookService;
 
-//@RestController
 @Controller
 public class BookController {
 
@@ -30,12 +29,16 @@ public class BookController {
 
 	@MutationMapping("createBook")
 	public Book createBook(@Argument("book") Book book) {
-		// Your logic to create a new book using the provided Book
 		return service.createBook(book);
 	}
 
 	@MutationMapping("updateBook")
 	public Book updateBook(@Argument("id") int id, @Argument("book") Book book) {
 		return service.updateBook(id, book);
+	}
+
+	@MutationMapping("deleteBook")
+	public String deleteBook(@Argument int id) {
+		return service.deleteBook(id);
 	}
 }
