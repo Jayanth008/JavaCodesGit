@@ -1,24 +1,16 @@
-type Query{
-allBooks:[Book]
-bookById(id:Int):Book
+type Query {
+  allBooks: [Book]
+  bookById(id: Int): Book
 }
+
 type Mutation {
-  createBook(book: BookInput!): Book
-  }
-
-
-type Book{
-
-	id:ID!
-    title:String
-    descp:String
-    author:String
-    price:Float
-    pages:Int
-
-
+  createBook(book: BookInput): Book
+  updateBook(id: Int, book: BookInput): Book
 }
-input BookInput {
+
+
+type Book {
+  id: ID!
   title: String
   descp: String
   author: String
@@ -26,4 +18,10 @@ input BookInput {
   pages: Int
 }
 
-
+input BookInput {
+  title: String
+  descp: String
+  author: String
+  price: Float
+  pages: Int
+}

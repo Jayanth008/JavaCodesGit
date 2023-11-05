@@ -16,11 +16,6 @@ public class BookServiceImpl implements BookService {
 	private BookRepo repo;
 
 	@Override
-	public Book add(Book book) {
-		return repo.save(book);
-	}
-
-	@Override
 	public List<Book> listOfBooks() {
 		return repo.findAll();
 	}
@@ -31,8 +26,26 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public List<Book> addall(List<Book> books) {
-		return repo.saveAll(books);
+	public Book createBook(Book book) {
+		return repo.save(book);
+	}
+
+	@Override
+	public Book updateBook(int id, Book book) {
+		Book existingBook = repo.findById(id).orElse(null);
+
+		if (existingBook != null) {
+			// Update the fields of the existing book with the values from the updatedBook
+			existingBook.setTitle(book.getTitle());
+			existingBook.setDescp(book.getDescp());
+			existingBook.setAuthor(book.getAuthor());
+			existingBook.setPrice(book.getPrice());
+			existingBook.setPages(book.getPages());
+
+			return repo.save(existingBook);
+		} else {
+			return null; // Book not found
+		}
 	}
 
 }
