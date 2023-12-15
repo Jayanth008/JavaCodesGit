@@ -1,7 +1,7 @@
 package enums;
 
 public enum DaysOfWeek {
-	MONDAY("Mon"), TUESDAY("Tue"), WEDNESDAY("Wed"), THURSDAY("Thur"), FRIDAY("Fri"), SATURDAY("Sat"), SUNDAY("Sun");
+	MONDAY("Mon"), TUESDAY("Tues"), WEDNESDAY("Wed"), THURSDAY("Thur"), FRIDAY("Fri"), SATURDAY("Sat"), SUNDAY("Sun");
 
 	private final String abrivation;
 
