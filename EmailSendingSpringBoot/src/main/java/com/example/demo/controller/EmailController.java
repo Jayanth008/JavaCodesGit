@@ -31,7 +31,7 @@ public class EmailController {
 	}
 
 //	 @Scheduled(cron = "0 0 7 * * ?") // Trigger at 7 AM every day
-	@Scheduled(cron = "0 * * * * ?")
+//	@Scheduled(cron = "0 * * * * ?")
 	public void sendDailyEmail() {
 		// todays date
 		LocalDate todayDate = LocalDate.now();
@@ -42,7 +42,7 @@ public class EmailController {
 				+ "Have a great day!";
 
 		EmailDetailes emailDetails = new EmailDetailes();
-		emailDetails.setRecipient("prudhvi.kalavakunta@capgemini.com");
+		emailDetails.setRecipient("buddhishivaprasad7@gmail.com");
 		emailDetails.setSubject("JMS Test Email");
 		emailDetails.setMsgBody(messageBody);
 		String status = emailService.sendEmail(emailDetails);

@@ -8,28 +8,49 @@ import org.springframework.stereotype.Service;
 import com.example.demo.model.Book;
 import com.example.demo.repo.BookRepo;
 import com.example.demo.service.BookService;
+
 @Service
 public class BookServiceImpl implements BookService {
-	
+
 	@Autowired
 	private BookRepo repo;
 
 	@Override
-	public Book add(Book book) {
-		// TODO Auto-generated method stub
-		return repo.save(book);
-	}
-
-	@Override
 	public List<Book> listOfBooks() {
-		// TODO Auto-generated method stub
 		return repo.findAll();
 	}
 
 	@Override
 	public Book findById(int id) {
-		// TODO Auto-generated method stub
-		return repo.findById(id).orElseThrow(()->new RuntimeException("Book not Found"));
+		return repo.findById(id).orElseThrow(() -> new RuntimeException("Book not Found"));
+	}
+
+	@Override
+	public Book createBook(Book book) {
+		return repo.save(book);
+	}
+
+	@Override
+	public Book updateBook(int id, Book book) {
+		Book existingBook = repo.findById(id).orElse(null);
+
+		if (existingBook != null) {
+			existingBook.setTitle(book.getTitle());
+			existingBook.setDescp(book.getDescp());
+			existingBook.setAuthor(book.getAuthor());
+			existingBook.setPrice(book.getPrice());
+			existingBook.setPages(book.getPages());
+
+			return repo.save(existingBook);
+		} else {
+			return null;
+		}
+	}
+
+	@Override
+	public String deleteBook(int id) {
+		repo.deleteById(id);
+		return "Book Deleted";
 	}
 
 }
